@@ -1,10 +1,10 @@
- import React, { Component } from 'react'
+ import React, {Component, PropTypes} from 'react';
  import {
    View,
    Text,
    TouchableOpacity,
    StyleSheet,
- } from 'react-native'
+ } from 'react-native';
 
  export default class MainScreen extends Component {
    render() {
@@ -16,7 +16,7 @@
         </View>
 
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={this.props.getHelpPressHandler}>
             <Text style={styles.buttonText}>Get Help</Text>
           </TouchableOpacity>
         </View>
@@ -24,6 +24,10 @@
      )
    }
  }
+
+ MainScreen.proptypes = {
+   getHelpPressHandler: PropTypes.func.isRequired,
+ };
 
 const styles = StyleSheet.create({
   container: {

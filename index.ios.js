@@ -3,12 +3,12 @@ import {
   AppRegistry,
 } from 'react-native';
 
-import MainScreen from './components/MainScreen'
+import App from './components/App';
 
 export default class ChatNow extends Component {
   render() {
     return (
-      <MainScreen />
+      <App />
     );
   }
 }
